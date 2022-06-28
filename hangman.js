@@ -43,14 +43,5 @@ else {
 }
 
 
-let game1 = new Hangman('hello', 3)
-let game2 = new Hangman ('dance', 2)
 
-game1.makeGuess("c")
-game1.makeGuess("z")
-game1.makeGuess("e")
-
-console.log(game1.getPuzzle())
-console.log(game2.getPuzzle())
-console.log(game1.guesses)
 
