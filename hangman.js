@@ -33,6 +33,7 @@ else {
 }
 
 Hangman.prototype.makeGuess = function(guess) {
+    if (this.status === "playing") {
 
      guess = guess.toLowerCase()
      const uniqueGuess = !this.lettersGuessed.includes(guess)
@@ -46,8 +47,12 @@ if (uniqueGuess && notIncluded) {
 }
 
 this.game()
+    }
 
+    else {}
 }
+
+
 Hangman.prototype.getPuzzle = function () {
    let puzzle = ""
 this.word.forEach((letter) => 
