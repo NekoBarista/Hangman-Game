@@ -1,6 +1,7 @@
 let game1 = new Hangman('hello', 3)
 const puzzleEl = document.querySelector("#puzzle")
 const guessesEl = document.querySelector("#remaining")
+console.log(game1.status)
 
 puzzleEl.textContent = game1.getPuzzle()
 guessesEl.textContent =  `You have ${game1.guesses} guesses remaining`
@@ -11,6 +12,7 @@ window.addEventListener('keypress', function (e) {
   game1.makeGuess(guess)
   puzzleEl.textContent = game1.getPuzzle()
   guessesEl.textContent =  `You have ${game1.guesses} guesses remaining`
+  console.log(game1.status)
 
 })
 
