@@ -12,7 +12,6 @@ window.addEventListener('keypress', function (e) {
   game1.makeGuess(guess)
   puzzleEl.textContent = game1.getPuzzle()
   guessesEl.textContent =  `You have ${game1.guesses} guesses remaining`
-  console.log(game1.status)
   }
 
   else if (game1.status === "success") {
