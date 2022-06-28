@@ -1,13 +1,32 @@
-
-
-
-const Hangman = function(word, guesses, lettersGuessed) {
+class Hangman {
+    constructor(word, guesses, lettersGuessed) {
     this.word = word.toLowerCase().split("")
     this.guesses = guesses
     this.lettersGuessed = []
 this.status = "playing" }
 
-Hangman.prototype.game = function (){
+
+makeGuess(guess) {
+    if (this.status === "playing") {
+
+     guess = guess.toLowerCase()
+     const uniqueGuess = !this.lettersGuessed.includes(guess)
+     const notIncluded = !this.word.includes(guess)
+
+    if (uniqueGuess) {
+        this.lettersGuessed.push(guess)
+    }
+if (uniqueGuess && notIncluded) {
+    this.guesses--
+}
+
+this.game()
+    }
+
+    else {}
+}
+
+game (){
     let success = true
 
 this.word.forEach((letter) => {
@@ -32,48 +51,27 @@ else {
 }
 }
 
-Hangman.prototype.makeGuess = function(guess) {
-    if (this.status === "playing") {
-
-     guess = guess.toLowerCase()
-     const uniqueGuess = !this.lettersGuessed.includes(guess)
-     const notIncluded = !this.word.includes(guess)
-
-    if (uniqueGuess) {
-        this.lettersGuessed.push(guess)
-    }
-if (uniqueGuess && notIncluded) {
-    this.guesses--
-}
-
-this.game()
-    }
-
-    else {}
-}
-
-
-Hangman.prototype.getPuzzle = function () {
-   let puzzle = ""
-this.word.forEach((letter) => 
-{
-if (this.lettersGuessed.includes(letter) || letter === "" )
-{
-puzzle += letter
-}
-
-else {
-   puzzle += "*" 
-}
-
-
-
-})
-   return puzzle
-
+getPuzzle () {
+    let puzzle = ""
+ this.word.forEach((letter) => 
+ {
+ if (this.lettersGuessed.includes(letter) || letter === "" )
+ {
+ puzzle += letter
+ }
+ 
+ else {
+    puzzle += "*" 
+ }
+ 
+ 
+ 
+ })
+    return puzzle
+ 
+ 
+ }
 
 }
-
-
 
 
