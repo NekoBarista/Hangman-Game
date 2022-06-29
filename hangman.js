@@ -30,7 +30,7 @@ game (){
     let success = true
 
 this.word.forEach((letter) => {
-if (this.lettersGuessed.includes(letter)) {}
+if (this.lettersGuessed.includes(letter) || letter === " ") {}
 else {
     success = false
 }
@@ -55,7 +55,7 @@ get getPuzzle () {
     let puzzle = ""
  this.word.forEach((letter) => 
  {
- if (this.lettersGuessed.includes(letter) || letter === "" )
+ if (this.lettersGuessed.includes(letter) || letter === " " )
  {
  puzzle += letter
  }

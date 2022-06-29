@@ -1,4 +1,4 @@
-let game1 = new Hangman('hello', 3)
+let game1 = new Hangman('car parts', 3)
 const puzzleEl = document.querySelector("#puzzle")
 const guessesEl = document.querySelector("#remaining")
 
