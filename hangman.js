@@ -51,7 +51,7 @@ else {
 }
 }
 
-getPuzzle () {
+get getPuzzle () {
     let puzzle = ""
  this.word.forEach((letter) => 
  {
@@ -70,6 +70,25 @@ getPuzzle () {
     return puzzle
  
  
+ }
+
+
+ get gameMessage () {
+    if (game1.status === "playing") {
+       return `You have ${game1.guesses} guesses remaining`
+        }
+      
+        else if (game1.status === "success") {
+          return "Congratulations! You win!"
+          
+        }
+      
+        else {
+        return `Sorry - you lose! The word was "${game1.word.join("")}"`
+         
+        }
+
+
  }
 
 }
