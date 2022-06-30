@@ -15,8 +15,15 @@ render()
 
 
 const render = () => {
-  puzzleEl.textContent = game1.getPuzzle
+  puzzleEl.innerHTML = " "
 guessesEl.textContent =  game1.gameMessage
+
+game1.getPuzzle.split('').forEach((letter)=>{
+const letterEl = document.createElement('span')
+letterEl.textContent = letter
+puzzleEl.appendChild(letterEl)
+
+})
 
 }
 

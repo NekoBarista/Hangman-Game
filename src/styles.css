@@ -1,0 +1,29 @@
+body { display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("game-boy-801977.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color:#87cefa
+
+
+
+}
+
+#main { text-align: center;
+    position: absolute;
+top: 10%;
+font-size: 80%;
+font-family: "consolas";
+}
+
+
+button {
+    font-family: "consolas";
+    cursor: pointer;
+}
+
+#remaining {font-weight: bold;}
+
+span {border-bottom: 1px solid #534f59;
+    text-transform: uppercase}

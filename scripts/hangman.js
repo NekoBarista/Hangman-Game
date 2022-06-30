@@ -84,7 +84,7 @@ get getPuzzle () {
         }
       
         else {
-        return `Sorry - you lose! The word was "${game1.word.join("")}"`
+        return `The word was "${game1.word.join("")}"`
          
         }
 
