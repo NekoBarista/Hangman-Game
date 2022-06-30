@@ -26,4 +26,7 @@ button {
 #remaining {font-weight: bold;}
 
 span {border-bottom: 1px solid #534f59;
-    text-transform: uppercase}
+    text-transform: uppercase;
+height: 2.4rem;
+width: 2.4rem;
+margin: 0 .09rem;}
