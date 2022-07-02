@@ -14,7 +14,10 @@ makeGuess(guess) {
      const notIncluded = !this.word.includes(guess)
 
     if (uniqueGuess) {
-        this.lettersGuessed.push(guess)
+        this.lettersGuessed = [guess, ...this.lettersGuessed]
+    
+
+
     }
 if (uniqueGuess && notIncluded) {
     this.guesses--
@@ -90,6 +93,8 @@ get getPuzzle () {
 
 
  }
+
+
 
 }
 

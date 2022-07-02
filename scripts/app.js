@@ -8,6 +8,7 @@ const guessesEl = document.querySelector("#remaining")
 window.addEventListener('keypress', (e) => {
   const guess = e.key
   game1.makeGuess(guess)
+  
   puzzleEl.textContent = game1.getPuzzle
 guessesEl.textContent =  game1.gameMessage
 render()
